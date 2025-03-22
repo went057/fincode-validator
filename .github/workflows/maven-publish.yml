@@ -19,11 +19,6 @@ jobs:
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
       - name: Set version
         run: mvn versions:set -DnewVersion=${{ github.event.release.tag_name }}
-      - name: Configure GPG Key
-        run: |
-          gpg --batch --import ~/.gnupg/private.key
-        env:
-          GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
       - name: Publish package
         run: mvn -P release --batch-mode deploy -DskipTests
         env:
