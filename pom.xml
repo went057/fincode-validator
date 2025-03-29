@@ -42,7 +42,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/your-github-username/your-repo-name</url>
+            <url>https://maven.pkg.github.com/went057/fincode-validator</url>
         </repository>
     </distributionManagement>
 
